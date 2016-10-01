@@ -1,0 +1,12 @@
+body{
+  display: flex;
+  color: $colorText;
+  background: $bodyBg;
+  @include anim($param: background, $dur: .5s);
+  @include bp(800){
+    background: $colorText;
+  }
+}
+p{
+
+}

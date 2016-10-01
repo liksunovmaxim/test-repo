@@ -1,0 +1,20 @@
+.list{
+  list-style-type: none;
+  @include size($size: 200);
+  @include bp(800){
+    background: $colorText;
+  }
+  &__item{
+    @for $i from 1 through 5{
+      &:nth-child(#{$i}){
+        background: lighten(red, $i * 10%);
+      }
+    }
+    span{
+      color: red;
+    }
+  }
+  &:after{
+    @extend %list-reset;
+  }
+}

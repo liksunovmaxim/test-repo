@@ -1,0 +1,15 @@
+@mixin color($color){
+  color: $color;
+}
+@mixin anim($param: all, $dur: .2s, $type: ease-out, $delay: 0s){
+  transition: $param $dur $type $delay;
+}
+@mixin bp($point, $type: max){
+  @media screen and (#{$type}-width: #{$point}px){
+    @content;
+  }
+}
+@mixin size($size){
+  width: #{$size}px;
+  height: #{$size}px;
+}
