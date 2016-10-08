@@ -1,7 +1,7 @@
 .list{
   list-style-type: none;
   @include size($size: 200);
-  @include bp(800){
+  @include bp(700){
     background: $colorText;
   }
   &__item{
